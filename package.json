@@ -1,0 +1,14 @@
+{
+  "name": "clinical-physiques",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"Static site ready\""
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "resend": "^6.9.0"
+  },
+  "devDependencies": {}
+}

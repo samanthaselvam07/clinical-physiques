@@ -46,7 +46,8 @@ a {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+.form-status:focus-visible {
   outline: 3px solid var(--copper);
   outline-offset: 4px;
 }
@@ -695,9 +696,36 @@ h3 {
   width: 100%;
 }
 
+.honeypot {
+  left: -9999px;
+  position: absolute;
+}
+
 .lead-form .button {
   margin-top: 12px;
   width: 100%;
+}
+
+.lead-form .button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
+.form-status {
+  color: rgba(17, 17, 17, 0.68);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0;
+  min-height: 1.4em;
+}
+
+.form-status[data-state="success"] {
+  color: var(--olive);
+}
+
+.form-status[data-state="error"] {
+  color: #8f3f25;
 }
 
 .microcopy {
