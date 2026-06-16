@@ -72,7 +72,7 @@ input:focus-visible {
   backdrop-filter: blur(18px);
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto;
   min-height: 84px;
   padding: 18px clamp(18px, 4vw, 64px);
   position: sticky;
@@ -93,19 +93,6 @@ input:focus-visible {
   height: 42px;
   object-fit: contain;
   width: 42px;
-}
-
-nav {
-  display: flex;
-  gap: clamp(18px, 3vw, 38px);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-nav a {
-  align-items: center;
-  display: inline-flex;
-  min-height: 44px;
 }
 
 .button {
@@ -412,25 +399,148 @@ h3 {
   max-width: 980px;
 }
 
-.learning-list {
+.inside-layout {
+  align-items: start;
   display: grid;
-  margin-top: 42px;
+  gap: clamp(28px, 5vw, 70px);
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+  margin-top: 48px;
 }
 
-.learning-list article {
-  align-items: baseline;
-  border-top: 1px solid var(--soft-border);
+.blueprint-preview {
+  position: sticky;
+  top: 118px;
+}
+
+.blueprint-page {
+  background: var(--bone);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
+  color: var(--obsidian);
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1fr);
-  padding: clamp(24px, 3vw, 38px) 0;
+  min-height: 560px;
+  overflow: hidden;
+  padding: clamp(26px, 4vw, 42px);
+  position: relative;
 }
 
-.learning-list article:last-child {
-  border-bottom: 1px solid var(--soft-border);
+.blueprint-page::before {
+  background: var(--copper);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 8px;
 }
 
-.learning-list p {
+.blueprint-page::after {
+  background: rgba(180, 108, 69, 0.12);
+  bottom: -90px;
+  content: "";
+  height: 220px;
+  position: absolute;
+  right: -80px;
+  transform: rotate(-14deg);
+  width: 220px;
+}
+
+.blueprint-label,
+.lesson-number {
+  color: var(--copper);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.blueprint-page h3 {
+  font-size: clamp(2.2rem, 4vw, 4.3rem);
+  max-width: 420px;
+}
+
+.framework-map {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.framework-map span {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  font-weight: 800;
+  min-height: 70px;
+  padding: 16px;
+}
+
+.review-strip {
+  display: grid;
+  gap: 12px;
+}
+
+.review-strip span {
+  background: var(--stone);
+  border-radius: 999px;
+  display: block;
+  height: 10px;
+}
+
+.review-strip span:nth-child(1) {
+  width: 84%;
+}
+
+.review-strip span:nth-child(2) {
+  width: 62%;
+}
+
+.review-strip span:nth-child(3) {
+  width: 74%;
+}
+
+.blueprint-page p {
+  align-self: end;
+  color: rgba(17, 17, 17, 0.68);
+  font-weight: 600;
+  margin-bottom: 0;
+  max-width: 430px;
+  position: relative;
+  z-index: 1;
+}
+
+.learning-list {
+  display: grid;
+  gap: 14px;
+}
+
+.learning-card {
+  align-items: start;
+  background: rgba(246, 242, 235, 0.055);
+  border: 1px solid var(--soft-border);
+  border-radius: 8px;
+  display: grid;
+  gap: clamp(18px, 3vw, 32px);
+  grid-template-columns: 58px minmax(0, 1fr);
+  min-height: 150px;
+  padding: clamp(22px, 3vw, 34px);
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.learning-card:hover {
+  background: rgba(246, 242, 235, 0.09);
+  border-color: rgba(246, 242, 235, 0.36);
+  transform: translateY(-2px);
+}
+
+.learning-card h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2.35rem);
+}
+
+.learning-card p {
   color: rgba(246, 242, 235, 0.74);
   font-size: 1.06rem;
   margin-bottom: 0;
@@ -610,6 +720,7 @@ h3 {
 @media (max-width: 1040px) {
   .hero,
   .problem-section,
+  .inside-layout,
   .difference-section,
   .sammi-section,
   .download-section {
@@ -624,6 +735,14 @@ h3 {
     min-height: 620px;
   }
 
+  .blueprint-preview {
+    position: static;
+  }
+
+  .blueprint-page {
+    min-height: 460px;
+  }
+
   .fit-grid,
   .outcome-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -631,18 +750,14 @@ h3 {
 }
 
 @media (max-width: 780px) {
-  .site-header {
-    grid-template-columns: 1fr auto;
-  }
-
-  .site-header nav {
-    display: none;
-  }
-
   .trust-row,
-  .learning-list article,
   .credential-grid {
     grid-template-columns: 1fr;
+  }
+
+  .learning-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .trust-row {
@@ -705,6 +820,18 @@ h3 {
 
   .hero-media {
     min-height: 470px;
+  }
+
+  .inside-layout {
+    margin-top: 34px;
+  }
+
+  .blueprint-page {
+    min-height: 420px;
+  }
+
+  .framework-map {
+    grid-template-columns: 1fr;
   }
 
   .device-stack {
