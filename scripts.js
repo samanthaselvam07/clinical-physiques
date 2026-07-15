@@ -32,7 +32,7 @@ if (leadForm) {
       company: String(formData.get("company") || "").trim(),
     };
 
-    status.textContent = "Sending your blueprint...";
+    status.textContent = "Sending...";
     status.dataset.state = "loading";
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
@@ -50,14 +50,14 @@ if (leadForm) {
       }
 
       leadForm.reset();
-      status.textContent = result.message || "Check your inbox. The blueprint is on its way.";
+      status.textContent = result.message || "Thank you. Please check your inbox.";
       status.dataset.state = "success";
       submitButton.textContent = "Sent";
     } catch (error) {
       status.textContent = error.message;
       status.dataset.state = "error";
       submitButton.disabled = false;
-      submitButton.textContent = "Send Me The Blueprint";
+      submitButton.textContent = "Submit";
     }
   });
 }

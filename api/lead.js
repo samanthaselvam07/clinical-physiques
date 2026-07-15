@@ -85,6 +85,10 @@ export default async function handler(req, res) {
     return json(res, 405, { error: "Method not allowed" });
   }
 
+  if (process.env.LEAD_MAGNET_ENABLED !== "true") {
+    return json(res, 410, { error: "The free blueprint is not currently available." });
+  }
+
   const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL;
   const resendApiKey = process.env.RESEND_API_KEY;
 
