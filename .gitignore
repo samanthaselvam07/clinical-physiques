@@ -6,6 +6,9 @@ dist/
 .vercel
 .env*
 public/index.html
+public/about.html
+public/blog.html
+public/blueprint.html
 public/styles.css
 public/scripts.js
 public/5.png

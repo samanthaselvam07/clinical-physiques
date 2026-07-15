@@ -73,7 +73,7 @@ input:focus-visible,
   backdrop-filter: blur(18px);
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
   min-height: 84px;
   padding: 18px clamp(18px, 4vw, 64px);
   position: sticky;
@@ -123,6 +123,378 @@ input:focus-visible,
   justify-self: end;
   min-height: 44px;
   padding: 0 20px;
+}
+
+.primary-nav {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  justify-self: center;
+}
+
+.primary-nav a,
+.site-footer nav a,
+.text-link {
+  color: rgba(17, 17, 17, 0.68);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.primary-nav a {
+  border-radius: 999px;
+  padding: 10px 12px;
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"],
+.site-footer nav a:hover,
+.text-link:hover {
+  color: var(--copper);
+}
+
+.text-link {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}
+
+.text-link-light {
+  color: rgba(246, 242, 235, 0.74);
+}
+
+.text-link-light:hover {
+  color: var(--sand);
+}
+
+.brand-hero {
+  display: grid;
+  gap: clamp(34px, 5vw, 76px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.68fr);
+  min-height: calc(100dvh - 84px);
+  padding: clamp(50px, 7vw, 112px) clamp(18px, 5vw, 76px) clamp(52px, 7vw, 96px);
+}
+
+.brand-hero-copy {
+  align-self: center;
+  max-width: 930px;
+}
+
+.brand-hero-panel {
+  align-self: stretch;
+  background-image:
+    linear-gradient(180deg, rgba(17, 17, 17, 0.12), rgba(17, 17, 17, 0.72)),
+    url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&fm=jpg&q=80&w=1600");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 16px;
+  min-height: 640px;
+  padding: clamp(18px, 3vw, 32px);
+}
+
+.method-card {
+  align-self: end;
+  background: rgba(246, 242, 235, 0.92);
+  border: 1px solid rgba(246, 242, 235, 0.6);
+  border-radius: 8px;
+  color: var(--obsidian);
+  max-width: 520px;
+  padding: clamp(22px, 3vw, 34px);
+}
+
+.method-card span,
+.pathway-label,
+.article-card span {
+  color: var(--copper);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.method-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 3.7rem);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.method-card p,
+.success-card p,
+.pathway-card p,
+.article-card p,
+.coach-card p,
+.philosophy-section p {
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.method-card-secondary {
+  align-self: start;
+  justify-self: end;
+  max-width: 380px;
+}
+
+.method-card-secondary strong {
+  font-size: clamp(1.55rem, 2.3vw, 2.5rem);
+}
+
+.intro-section,
+.proof-section,
+.experience-section,
+.work-section,
+.connection-section,
+.page-hero,
+.coach-section,
+.philosophy-section,
+.blog-section,
+.final-brand-cta {
+  padding: clamp(64px, 8vw, 122px) clamp(18px, 5vw, 76px);
+}
+
+.intro-section,
+.philosophy-section {
+  background: var(--mist);
+  display: grid;
+  gap: clamp(28px, 6vw, 92px);
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 1fr);
+}
+
+.proof-section,
+.work-section,
+.blog-section {
+  background: var(--bone);
+}
+
+.success-grid,
+.pathway-grid,
+.article-grid,
+.coach-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.success-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.success-card,
+.pathway-card,
+.article-card,
+.coach-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(22px, 3vw, 34px);
+}
+
+.success-card {
+  min-height: 330px;
+}
+
+.success-card span {
+  color: var(--copper);
+  display: block;
+  font-weight: 800;
+  margin-bottom: 44px;
+}
+
+.success-card h3,
+.pathway-card h3,
+.article-card h3,
+.coach-card h3 {
+  font-size: clamp(1.45rem, 2vw, 2.3rem);
+}
+
+.experience-section {
+  align-items: center;
+  background: var(--stone);
+  display: grid;
+  gap: clamp(28px, 5vw, 76px);
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1fr);
+}
+
+.pathway-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pathway-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+
+.pathway-card ul {
+  color: rgba(17, 17, 17, 0.7);
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 28px;
+  padding-left: 20px;
+}
+
+.pathway-card .button {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.pathway-card-dark {
+  background: var(--carbon);
+  color: var(--bone);
+}
+
+.pathway-card-dark p,
+.pathway-card-dark ul {
+  color: rgba(246, 242, 235, 0.72);
+}
+
+.connection-section {
+  background: var(--mist);
+}
+
+.final-brand-cta {
+  align-items: center;
+  background: var(--olive);
+  color: var(--bone);
+  display: grid;
+  gap: clamp(30px, 5vw, 78px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+}
+
+.final-brand-cta .eyebrow,
+.final-brand-cta p {
+  color: var(--sand);
+}
+
+.cta-panel {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+}
+
+.page-hero {
+  background: var(--bone);
+  max-width: 1180px;
+}
+
+.page-hero h1 {
+  max-width: 1040px;
+}
+
+.coach-section {
+  background: var(--mist);
+}
+
+.coach-grid {
+  grid-template-columns: 1fr;
+}
+
+.coach-card {
+  align-items: stretch;
+  display: grid;
+  gap: clamp(24px, 4vw, 54px);
+  grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+}
+
+.coach-image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  min-height: 480px;
+}
+
+.coach-image-sammi {
+  background-image: url("Style%20Board%20Clinical%20Physiques.png");
+  background-position: top left;
+}
+
+.coach-image-din {
+  background-image:
+    linear-gradient(180deg, rgba(17, 17, 17, 0.08), rgba(17, 17, 17, 0.36)),
+    url("https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&fm=jpg&q=80&w=1500");
+}
+
+.mini-credentials {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 28px 0 0;
+}
+
+.mini-credentials div,
+.principle-stack span {
+  background: var(--bone);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.mini-credentials dt {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.mini-credentials dd {
+  color: rgba(17, 17, 17, 0.62);
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.principle-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.principle-stack span {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.4vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.article-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.article-card {
+  min-height: 340px;
+}
+
+.article-card-featured {
+  background: var(--carbon);
+  color: var(--bone);
+  grid-column: span 2;
+}
+
+.article-card-featured p {
+  color: rgba(246, 242, 235, 0.72);
+}
+
+.article-card span {
+  margin-top: 28px;
+}
+
+.site-footer {
+  align-items: center;
+  background: var(--bone);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 28px clamp(18px, 5vw, 76px);
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
 }
 
 .hero {
@@ -747,16 +1119,27 @@ h3 {
 
 @media (max-width: 1040px) {
   .hero,
+  .brand-hero,
   .problem-section,
   .inside-layout,
   .difference-section,
+  .intro-section,
+  .experience-section,
+  .philosophy-section,
   .sammi-section,
-  .download-section {
+  .download-section,
+  .final-brand-cta,
+  .coach-card {
     grid-template-columns: 1fr;
   }
 
-  .hero {
+  .hero,
+  .brand-hero {
     min-height: auto;
+  }
+
+  .brand-hero-panel {
+    min-height: 580px;
   }
 
   .hero-media {
@@ -772,14 +1155,22 @@ h3 {
   }
 
   .fit-grid,
-  .outcome-grid {
+  .outcome-grid,
+  .success-grid,
+  .article-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .article-card-featured {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 780px) {
   .trust-row,
-  .credential-grid {
+  .credential-grid,
+  .pathway-grid,
+  .mini-credentials {
     grid-template-columns: 1fr;
   }
 
@@ -794,6 +1185,22 @@ h3 {
 
   .hero-media {
     min-height: 520px;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+
+  .pathway-card {
+    min-height: auto;
+  }
+
+  .coach-image {
+    min-height: 360px;
   }
 
   .guide-desktop {
@@ -838,6 +1245,11 @@ h3 {
     padding-top: 34px;
   }
 
+  .brand-hero,
+  .page-hero {
+    padding-top: 44px;
+  }
+
   .hero-actions .button {
     width: 100%;
   }
@@ -848,6 +1260,15 @@ h3 {
 
   .hero-media {
     min-height: 470px;
+  }
+
+  .brand-hero-panel {
+    min-height: 520px;
+    padding: 14px;
+  }
+
+  .method-card-secondary {
+    justify-self: stretch;
   }
 
   .inside-layout {
@@ -885,13 +1306,26 @@ h3 {
   }
 
   .fit-grid,
-  .outcome-grid {
+  .outcome-grid,
+  .success-grid,
+  .article-grid {
     grid-template-columns: 1fr;
   }
 
   .fit-grid article,
-  .outcome-grid p {
+  .outcome-grid p,
+  .success-card,
+  .article-card {
     min-height: auto;
+  }
+
+  .article-card-featured {
+    grid-column: span 1;
+  }
+
+  .pathway-card .button,
+  .cta-panel .button {
+    width: 100%;
   }
 }
 

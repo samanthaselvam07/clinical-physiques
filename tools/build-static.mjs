@@ -7,6 +7,9 @@ mkdirSync(publicDir, { recursive: true });
 
 for (const file of [
   "index.html",
+  "about.html",
+  "blog.html",
+  "blueprint.html",
   "styles.css",
   "scripts.js",
   "5.png",
