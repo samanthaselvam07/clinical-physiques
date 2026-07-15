@@ -9,6 +9,7 @@ for (const file of [
   "index.html",
   "about.html",
   "blog.html",
+  "resources.html",
   "styles.css",
   "scripts.js",
   "5.png",

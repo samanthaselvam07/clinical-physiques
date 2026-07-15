@@ -1,4 +1,4 @@
-const leadForm = document.querySelector(".lead-form");
+const forms = document.querySelectorAll(".lead-form");
 const revealItems = document.querySelectorAll(".reveal");
 
 if (revealItems.length > 0) {
@@ -18,19 +18,26 @@ if (revealItems.length > 0) {
   }
 }
 
-if (leadForm) {
-  const submitButton = leadForm.querySelector("button[type='submit']");
-  const status = leadForm.querySelector("[data-form-status]");
+forms.forEach((form) => {
+  const submitButton = form.querySelector("button[type='submit']");
+  const status = form.querySelector("[data-form-status]");
+  const defaultButtonText = submitButton?.textContent || "Submit";
 
-  leadForm.addEventListener("submit", async (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(leadForm);
+    const formData = new FormData(form);
     const payload = {
       firstName: String(formData.get("first-name") || "").trim(),
       email: String(formData.get("email") || "").trim(),
       company: String(formData.get("company") || "").trim(),
     };
+    const interest = String(formData.get("interest") || "").trim();
+    const endpoint = form.getAttribute("action") || "/api/lead";
+
+    if (interest) {
+      payload.interest = interest;
+    }
 
     status.textContent = "Sending...";
     status.dataset.state = "loading";
@@ -38,7 +45,7 @@ if (leadForm) {
     submitButton.textContent = "Sending...";
 
     try {
-      const response = await fetch("/api/lead", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -49,7 +56,7 @@ if (leadForm) {
         throw new Error(result.error || "Something went wrong. Please try again.");
       }
 
-      leadForm.reset();
+      form.reset();
       status.textContent = result.message || "Thank you. Please check your inbox.";
       status.dataset.state = "success";
       submitButton.textContent = "Sent";
@@ -57,7 +64,7 @@ if (leadForm) {
       status.textContent = error.message;
       status.dataset.state = "error";
       submitButton.disabled = false;
-      submitButton.textContent = "Submit";
+      submitButton.textContent = defaultButtonText;
     }
   });
-}
+});

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Clinical Physiques educational resources for training, nutrition, body recomposition, health, and physique mentorship."
+    >
+    <title>Resources | Clinical Physiques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Clinical Physiques home">
+        <img src="5.png" alt="" width="54" height="54">
+        <span>Clinical Physiques</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resources.html" aria-current="page">Resources</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <a class="button button-small" href="index.html#work-with-us">Work With Us</a>
+    </header>
+
+    <main id="main">
+      <section class="page-hero resources-hero" aria-labelledby="resources-page-title">
+        <p class="eyebrow reveal">Educational resources</p>
+        <h1 id="resources-page-title" class="reveal">Tools for people who want to understand their physique, not just follow a plan.</h1>
+        <p class="hero-lede reveal">This is where Clinical Physiques will house free downloads, paid education packs, workshops, and practical resources across nutrition, training, health, supplementation, and long-term body composition.</p>
+      </section>
+
+      <section class="resource-library-section" aria-labelledby="library-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Resource library</p>
+          <h2 id="library-title">Free and paid education, built from the same principles we coach with.</h2>
+        </div>
+
+        <div class="resource-grid">
+          <article class="resource-card reveal">
+            <div class="resource-meta">
+              <span>Free</span>
+              <span>Email access</span>
+            </div>
+            <h3>Body Recomposition Foundations</h3>
+            <p>A practical starting point for understanding training, nutrition, recovery, and the standards that create sustainable progress.</p>
+            <ul>
+              <li>Training and nutrition priorities</li>
+              <li>Weekly review prompts</li>
+              <li>Consistency and minimum standards</li>
+            </ul>
+          </article>
+
+          <article class="resource-card reveal">
+            <div class="resource-meta">
+              <span>Free</span>
+              <span>Email access</span>
+            </div>
+            <h3>Progress Review Checklist</h3>
+            <p>A calmer way to interpret scale weight, photos, biofeedback, performance, and lifestyle context without overreacting.</p>
+            <ul>
+              <li>Data-first review structure</li>
+              <li>Photo and measurement context</li>
+              <li>Adjustment decision rules</li>
+            </ul>
+          </article>
+
+          <article class="resource-card resource-card-dark reveal">
+            <div class="resource-meta">
+              <span>Paid</span>
+              <span>Secure checkout soon</span>
+            </div>
+            <h3>Physique Education Workshops</h3>
+            <p>Deeper education for people who want to understand the science and practical application behind physique development.</p>
+            <ul>
+              <li>Nutrition and supplementation seminars</li>
+              <li>Training technique and execution workshops</li>
+              <li>Templates, worksheets, and replay access</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="resource-access-section" id="resource-access" aria-labelledby="access-title">
+        <div class="download-copy reveal">
+          <p class="eyebrow">Get notified first</p>
+          <h2 id="access-title">Join the resource list.</h2>
+          <p>Submit your details and we will let you know when the first free downloads and paid education resources are ready. Paid resources will use secure checkout before any payment details are collected.</p>
+        </div>
+
+        <form class="lead-form resource-form reveal" action="/api/resource" method="post" data-resource-form>
+          <label for="resource-first-name">First Name</label>
+          <input id="resource-first-name" type="text" name="first-name" autocomplete="given-name" required>
+
+          <label for="resource-email">Email Address</label>
+          <input id="resource-email" type="email" name="email" autocomplete="email" required>
+
+          <label for="resource-interest">Resource Interest</label>
+          <select id="resource-interest" name="interest" required>
+            <option value="">Select one</option>
+            <option value="free-downloads">Free downloads</option>
+            <option value="paid-education">Paid education resources</option>
+            <option value="both">Both</option>
+          </select>
+
+          <label class="honeypot" for="resource-company">Company</label>
+          <input class="honeypot" id="resource-company" type="text" name="company" tabindex="-1" autocomplete="off">
+
+          <button class="button" type="submit">Join Resource List</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+          <p class="microcopy">You will receive educational updates from Clinical Physiques. No payment details are collected on this form.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="index.html" aria-label="Clinical Physiques home">
+        <img src="5.png" alt="" width="44" height="44">
+        <span>Clinical Physiques</span>
+      </a>
+      <nav aria-label="Footer navigation">
+        <a href="index.html#work-with-us">Work With Us</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
