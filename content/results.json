@@ -1,0 +1,357 @@
+{
+  "_howTo": "One entry per client spotlight, in display order. Add a testimonial by filling in 'name' and 'quote' (use a blank line between paragraphs). 'featured: true' shows it on the homepage (keep it to 4). For male clients add \"pronoun\": \"his\". Then run: npm run build 'highlight' is the short line that rotates through the quote spots on the homepage and other pages, with 'highlightMeta' underneath. 'otherQuotes' are testimonials without a photo.",
+  "results": [
+    {
+      "image": "result-02",
+      "stats": [
+        "5 year body recomposition",
+        "50kg+ fat lost",
+        "40cm+ off her waist"
+      ],
+      "name": "Angie",
+      "quote": "Sammi has been the best thing that I have found on my fitness journey! It has been such a pleasure and fun process from the get go! When I first started with Sammi I was also on another plan, but not as educated and motivated as I am now. I have honestly learned soo much more than I ever thought I would know, let alone look and feel fantastic. I know that I will always be learning on this journey, and I know I have peace of mind with this absolute legend by my side. What we have been able to achieve thus far is beyond incredible and I can't wait for what the future holds.",
+      "highlight": "I have honestly learned soo much more than I ever thought I would know, let alone look and feel fantastic.",
+      "highlightMeta": "50kg+ fat lost over 5 years",
+      "featured": true
+    },
+    {
+      "image": "result-01",
+      "stats": [
+        "25 week fat loss phase",
+        "20kg fat lost",
+        "15cm off her waist"
+      ],
+      "name": "Alyssa",
+      "quote": "I run two businesses and was constantly frustrated with having no energy, lots of brain fog and struggling to concentrate as the day wore on. Working with Sammi made me realise how much I was burning the candle at both ends, and was on track to being really burnt out.\n\nSammi gave me so much food, there were moments I actually questioned if I would lose weight, but as the weeks went on the weight came off and I was totally shocked. Sammi really knows what she is talking about, I could not recommend her more.",
+      "highlight": "Sammi really knows what she is talking about, I could not recommend her more.",
+      "highlightMeta": "20kg fat lost in 25 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-16",
+      "stats": [
+        "40 week fat loss phase",
+        "20kg fat lost",
+        "20cm off her waist"
+      ],
+      "name": "Tina",
+      "quote": "I was told at 28 that if I didn't change something, I most likely wouldn't see 30. This year I turned 30 and got a clean bill of health from my doctor! Working with Sammi has played a huge role in my ability to succeed and get the results I have achieved.\n\nI worked with another coach previously and just got given a PDF with some meal ideas and sent on my way... With Sammi the experience was completely different, she made sure everything fit into my life and schedule.\n\nI work full time and run a highly successful business on the side, so this means I am always on the go. Sammi made sure to set me up for success at every opportunity there was where I might have slipped. She continually goes the extra mile and I cannot thank her enough for the level of care and understanding she has given me over the last 2.5 years we have worked together.",
+      "highlight": "I was told at 28 that if I didn't change something, I most likely wouldn't see 30. This year I turned 30 and got a clean bill of health from my doctor!",
+      "highlightMeta": "20kg fat lost in 40 weeks",
+      "featured": true
+    },
+    {
+      "image": "result-25",
+      "pronoun": "his",
+      "stats": [
+        "Initial 20 week body recomposition",
+        "6kg lighter",
+        "11cm off his waist",
+        "Stronger than ever"
+      ],
+      "name": "Brendan B",
+      "quote": "I hired Din as a coach, but never expected what it has grown into. He oozes experience, knowledge and genuine care for his clients. He is a coach, but he is a genuinely good guy and friend now too and that transpires in his client relations. It reflects across his entire team. I've never worked with someone who cares so much and leads by example every single day.\n\nMy results speak for themselves - I've got more peeled than I've ever been, whilst growing, and have the best physique & health of my life. He's not scared to give you genuine unfiltered advice when you need it, and always in your corner for support. It's genuinely been a pleasure working with him and I'm excited to get some crazy results together in future!!",
+      "highlight": "I've got more peeled than I've ever been, whilst growing, and have the best physique & health of my life.",
+      "highlightMeta": "11cm off his waist in 20 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-09",
+      "stats": [
+        "Initial 17 week fat loss phase",
+        "15kg fat lost",
+        "20cm off her waist"
+      ],
+      "name": "Emily P",
+      "quote": "I started working with Sammi because I was really lost on how to achieve the results I was looking for. There is a lot of information on the internet and social media which makes it really hard to know what is the correct approach, but working with Sammi really cleared up a lot of things for me.\n\nShe was really patient with me and my many questions and took the time to call me when the conversation was going to be too long over text. She made such an effort to help me understand what we were doing and why we were doing it, and that is something I haven't seen in other coaching experiences.",
+      "highlight": "She made such an effort to help me understand what we were doing and why we were doing it, and that is something I haven't seen in other coaching experiences.",
+      "highlightMeta": "15kg fat lost in 17 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-12",
+      "stats": [
+        "Initial 16 week fat loss phase",
+        "10kg fat lost",
+        "20cm off her waist"
+      ],
+      "name": "Maria",
+      "quote": "I have worked with Sammi at Clinical Physiques for over 20 weeks and in that time have been able to achieve some fantastic results. After having tried various ways to lose weight and lacking motivation, Sammi's nutrition as well as workout program gave me the confidence to get back on track.\n\nSammi was always available to answer questions, give helpful guidance and the weekly feedback sessions were thorough and very supportive.\n\nI can't thank Sammi enough. She motivated me and got me back on track. I lost 10kg initially as well as completing a 10km run, which prior to starting with her I would not have been able to do. But more importantly her coaching gave me the confidence and knowledge to continue making changes and achieving new goals. I can highly recommend Sammi and the team at Clinical Physiques.",
+      "highlight": "I lost 10kg initially as well as completing a 10km run, which prior to starting with her I would not have been able to do.",
+      "highlightMeta": "20cm off her waist",
+      "featured": true
+    },
+    {
+      "image": "result-07",
+      "stats": [
+        "Initial 16 week fat loss phase",
+        "7kg fat lost",
+        "20cm off her waist"
+      ],
+      "name": "Diya",
+      "quote": "Sammi came highly recommended to me and it quickly became obvious why. I am studying bio-med, working and competing in karate tournaments so my schedule is very busy. Sammi taught me how to plan my days/weeks more effectively and she gave me the tools to ensure I was always able to operate at my best.",
+      "highlight": "Sammi taught me how to plan my days/weeks more effectively and she gave me the tools to ensure I was always able to operate at my best.",
+      "highlightMeta": "Studying, working and competing in karate",
+      "featured": false
+    },
+    {
+      "image": "result-27",
+      "pronoun": "his",
+      "stats": [
+        "Initial 20 week body recomposition",
+        "5kg lean mass gained",
+        "7cm off his waist"
+      ],
+      "name": "Joseph GS",
+      "quote": "Coaching from Din has totally changed my relationship with food and how I see myself! I'd done a few 12 week challenges but the novelty wears off after a while and even though I lose a kilo or two, I never really got significant change.\n\nI'm a type 1 diabetic who struggled with eating and training while long work hours, raising a baby girl and maintaining a social life after 30.\n\nThanks to Din I'm getting stronger, growing muscle for the first time and he's helped me with a diet that stabilised my blood sugars so I don't feel tired all the time.\n\nDin came highly recommended and I can see why. His level of knowledge is mind blowing and I'm always learning new stuff in my weekly check-ins! One of the best investments I've made and I'm excited to see my full potential!",
+      "highlight": "Thanks to Din I'm getting stronger, growing muscle for the first time and he's helped me with a diet that stabilised my blood sugars so I don't feel tired all the time.",
+      "highlightMeta": "5kg lean mass gained in 20 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-24",
+      "stats": [
+        "25 week fat loss phase",
+        "7kg lost",
+        "12cm off her waist"
+      ],
+      "name": "Jyn",
+      "quote": "Working with Sammi has been one of the best decisions I’ve made for myself. She’s not just a coach, she truly cares about your journey, your mindset, and how you feel in your own body.\n\nI’ve always enjoyed training, but recovery was something I struggled with for years. No matter how hard I tried, I never saw the kind of results I wanted until I started working with Sammi.\n\nHer regular check-ins kept me consistent with both diet and strength work, and I was honestly amazed at how my body started to transform. I feel stronger, more confident, and much healthier overall.\n\nAs a Sports Nutritionist, Sammi really knows her stuff and genuinely cares about helping you feel your best inside and out!",
+      "highlight": "Her regular check-ins kept me consistent with both diet and strength work, and I was honestly amazed at how my body started to transform.",
+      "highlightMeta": "12cm off her waist in 25 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-13",
+      "stats": [
+        "20 week fat loss phase",
+        "7kg fat lost",
+        "15cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-05",
+      "stats": [
+        "16 week fat loss phase",
+        "11kg fat lost",
+        "10cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-14",
+      "stats": [
+        "16 week fat loss phase",
+        "10kg fat lost",
+        "10cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-17",
+      "stats": [
+        "18 week fat loss phase",
+        "7kg fat lost",
+        "12cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-11",
+      "stats": [
+        "Initial 8 week fat loss phase",
+        "7kg fat lost",
+        "9cm off her waist"
+      ],
+      "name": "Kirsty",
+      "quote": "As someone who works in a very high pressure job, my health has admittedly been put on the back burner for a while. When I first started working with Sammi, I was really unsure how the whole process would work as I had tried so many different things in the past.\n\nShe went above and beyond to tell me the why behind everything, she gave me resources to continue my learning about topics I was interested in, and whenever she didn't know the answer she always went off and found it to then explain it back to me.\n\nWhile our journey together has only just begun, I am really excited to see how much progress I can make under Sammi's guidance.",
+      "highlight": "She went above and beyond to tell me the why behind everything.",
+      "highlightMeta": "9cm off her waist in 8 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-28",
+      "pronoun": "his",
+      "stats": [
+        "August 2024 to June 2026",
+        "Same weight",
+        "Better physique"
+      ],
+      "name": "Michael P",
+      "quote": "I am incredibly grateful for my experience with Din. His personalised approach and expert guidance have transformed my fitness journey from where I was stuck in a rut.\n\nDin's unwavering support and explanations of the process has kept me focussed with my goals, turning challenges into triumphs. His deep knowledge and commitment as a coach is evident. Thank you for helping me become the best version of myself.",
+      "highlight": "Din's unwavering support and explanations of the process has kept me focussed with my goals, turning challenges into triumphs.",
+      "highlightMeta": "Same weight, better physique",
+      "featured": false
+    },
+    {
+      "image": "result-03",
+      "stats": [
+        "18 month body recomposition",
+        "10kg fat lost",
+        "13cm off her waist"
+      ],
+      "name": "Carmen",
+      "quote": "I have been working with Sammi for 2 years now. When I first started I would binge eat every night and had a really poor relationship with food and myself.\n\nThroughout this process, we have not only addressed my physical health, but she has helped me understand why I would binge eat and gave me tools so that I could start to have a better relationship with food.\n\nThis process has been far from easy, and I still have a long way to go, but working with Sammi has not solely been about getting in better shape, it has been about improving my self confidence and my relationship with food. I can now confidently train in the gym and be in control around food.",
+      "highlight": "I can now confidently train in the gym and be in control around food.",
+      "highlightMeta": "18 month body recomposition",
+      "featured": false
+    },
+    {
+      "image": "result-20",
+      "stats": [
+        "12 month body recomposition",
+        "6kg fat lost",
+        "10cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-23",
+      "stats": [
+        "25 week body recomposition",
+        "5kg gained, 6kg lost",
+        "4cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-19",
+      "stats": [
+        "20 week body recomposition",
+        "6kg fat lost",
+        "7cm off her waist"
+      ],
+      "name": "Rin",
+      "quote": "I've been working with Sammi and honestly she's been amazing. She's really invested in helping me hit my goals and always makes sure I'm on the right track—even if it means changing things multiple times to find what works for me. What I love most is that she always points out my progress, even when I don't see it myself, which has helped my confidence so much. She's super supportive and caring, but also tells it how it is and keeps me accountable. I never feel judged, just backed and pushed in the best way. I'm really excited to keep working with her.",
+      "highlight": "What I love most is that she always points out my progress, even when I don't see it myself, which has helped my confidence so much.",
+      "highlightMeta": "7cm off her waist in 20 weeks",
+      "featured": false
+    },
+    {
+      "image": "result-26",
+      "pronoun": "his",
+      "stats": [
+        "Injury management",
+        "Physique rebalancing",
+        "Steady lean growth"
+      ],
+      "name": "Adam W",
+      "quote": "I was just going into the gym and lifting heavy, thinking that was what you had to do to get big. I was quite beat up constantly wrestling too.\n\nJust seeing what he was doing with other wrestlers who are also clients of his, I realised he was different to PTs I worked with in the past. I reached out to them and EVERYONE just said incredible stuff about him. We had a really good chat and a year and a half later I think it's been one of the smartest things I've ever done.\n\nDin makes it simple. He does everything for you except lift the weights, cook the food and put the food in your mouth.",
+      "highlight": "Din makes it simple. He does everything for you except lift the weights, cook the food and put the food in your mouth.",
+      "highlightMeta": "Injury management and steady lean growth",
+      "featured": false
+    },
+    {
+      "image": "result-18",
+      "stats": [
+        "12 week body recomposition",
+        "4kg fat lost",
+        "11cm off her waist"
+      ],
+      "name": "Sarah",
+      "quote": "Before starting with Sammi I was addicted to refined sugar. I would restrict quite heavily during the day and binge anything I could get my hands on at night. I have now lost upwards of 10kg with Sammi with her thoughtful and well delivered coaching.\n\nShe completely flipped the narrative of food for me, and I have been eating the most amount of food ever while consistently losing weight every week. I now have more confidence in myself, I am able to enjoy meals out with my family guilt free and ultimately I have become more knowledgeable on how to approach food on a day to day basis.\n\nSammi taught me how to create systems for different areas of my life to help me stay on track and accountable, and it is easily something I will teach my kids as they get older. This has been one of the best investments I have made into myself and my health. Thank you so much Sammi.",
+      "highlight": "She completely flipped the narrative of food for me, and I have been eating the most amount of food ever while consistently losing weight every week.",
+      "highlightMeta": "11cm off her waist in 12 weeks",
+      "featured": true
+    },
+    {
+      "image": "result-10",
+      "stats": [
+        "10 week body recomposition",
+        "12cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-04",
+      "stats": [
+        "Initial 10 week fat loss phase",
+        "2.5kg fat lost",
+        "11cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-06",
+      "stats": [
+        "40 week growth phase",
+        "6kg gained"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-21",
+      "stats": [
+        "40 week growth phase",
+        "6kg gained",
+        "7cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-15",
+      "stats": [
+        "25 week growth phase",
+        "7kg gained",
+        "4cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-22",
+      "stats": [
+        "25 week growth phase",
+        "8kg gained",
+        "5cm off her waist"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    },
+    {
+      "image": "result-08",
+      "stats": [
+        "20 week growth phase",
+        "5kg gained"
+      ],
+      "name": "",
+      "quote": "",
+      "featured": false
+    }
+  ],
+  "otherQuotes": [
+    {
+      "name": "Arianna",
+      "quote": "Sammi has been an excellent educator and trainer. She has managed to pick up on things that other trainers and physio's haven't. I am so much more confident and capable because of her.",
+      "meta": "Personal training client"
+    },
+    {
+      "name": "Davin S.",
+      "quote": "He is not just a coach, he is an educator who gave me the tools I needed to succeed.",
+      "meta": "Coached by Din"
+    }
+  ]
+}

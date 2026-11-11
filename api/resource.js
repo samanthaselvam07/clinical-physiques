@@ -1,5 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { Resend } from "resend";
+import { escapeHtml, getClientIp, isRateLimited, isSafeName } from "./_shared.js";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validInterests = new Set(["free-downloads", "paid-education", "both"]);
@@ -49,7 +50,7 @@ async function ensureResourceTable(sql) {
 }
 
 function buildEmailHtml(firstName, interest) {
-  const safeName = firstName || "there";
+  const safeName = escapeHtml(firstName || "there");
   const interestLabel = {
     "free-downloads": "free downloads",
     "paid-education": "paid education resources",
@@ -99,7 +100,7 @@ export default async function handler(req, res) {
     return json(res, 200, { ok: true });
   }
 
-  if (!firstName || !emailPattern.test(email) || !validInterests.has(interest)) {
+  if (!isSafeName(firstName) || email.length > 200 || !emailPattern.test(email) || !validInterests.has(interest)) {
     return json(res, 400, { error: "Please enter your first name, a valid email, and a resource interest." });
   }
 
@@ -109,6 +110,18 @@ export default async function handler(req, res) {
 
   try {
     await ensureResourceTable(sql);
+
+    const ip = getClientIp(req);
+    const limits = await isRateLimited(sql, { table: "resource_interests", ip, email });
+
+    if (limits.ipLimited) {
+      return json(res, 429, { error: "Too many submissions. Please try again later." });
+    }
+
+    if (limits.emailRecent) {
+      // Already signed up in the last hour: don't send another email to this inbox.
+      return json(res, 200, { ok: true, message: "You are on the resource list. Check your inbox for confirmation." });
+    }
 
     await sql`
       INSERT INTO resource_interests (
@@ -123,7 +136,7 @@ export default async function handler(req, res) {
         ${email},
         ${interest},
         ${req.headers["user-agent"] || null},
-        ${req.headers["x-forwarded-for"] || req.socket?.remoteAddress || null}
+        ${ip}
       )
       ON CONFLICT (email, source)
       DO UPDATE SET

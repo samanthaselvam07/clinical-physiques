@@ -1,5 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { Resend } from "resend";
+import { escapeHtml, getClientIp, isRateLimited, isSafeName } from "./_shared.js";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const leadMagnetPath = "/the-high-performing-womans-body-recomposition-blueprint.pdf";
@@ -26,7 +27,7 @@ function getBaseUrl(req) {
 }
 
 function buildEmailHtml(firstName, guideUrl) {
-  const safeName = firstName || "there";
+  const safeName = escapeHtml(firstName || "there");
 
   return `
     <div style="margin:0;background:#f6f2eb;padding:40px 20px;font-family:Inter,Arial,sans-serif;color:#111111;">
@@ -111,7 +112,7 @@ export default async function handler(req, res) {
     return json(res, 200, { ok: true });
   }
 
-  if (!firstName || !emailPattern.test(email)) {
+  if (!isSafeName(firstName) || email.length > 200 || !emailPattern.test(email)) {
     return json(res, 400, { error: "Please enter your first name and a valid email address." });
   }
 
@@ -122,6 +123,18 @@ export default async function handler(req, res) {
 
   try {
     await ensureLeadsTable(sql);
+
+    const ip = getClientIp(req);
+    const limits = await isRateLimited(sql, { table: "lead_magnet_signups", ip, email });
+
+    if (limits.ipLimited) {
+      return json(res, 429, { error: "Too many submissions. Please try again later." });
+    }
+
+    if (limits.emailRecent) {
+      // Already signed up in the last hour: don't send another email to this inbox.
+      return json(res, 200, { ok: true, message: "Check your inbox. The blueprint is on its way." });
+    }
 
     await sql`
       INSERT INTO lead_magnet_signups (
@@ -134,7 +147,7 @@ export default async function handler(req, res) {
         ${firstName},
         ${email},
         ${req.headers["user-agent"] || null},
-        ${req.headers["x-forwarded-for"] || req.socket?.remoteAddress || null}
+        ${ip}
       )
       ON CONFLICT (email, source)
       DO UPDATE SET

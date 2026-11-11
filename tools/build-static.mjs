@@ -1,19 +1,24 @@
-import { copyFileSync, mkdirSync } from "node:fs";
+import { cpSync, copyFileSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 
-const publicDir = join(process.cwd(), "public");
+const root = process.cwd();
+const publicDir = join(root, "public");
 
+rmSync(publicDir, { recursive: true, force: true });
 mkdirSync(publicDir, { recursive: true });
 
+// resources.html and blog.html are drafts and are left out until their content is ready
 for (const file of [
   "index.html",
   "about.html",
-  "blog.html",
-  "resources.html",
+  "privacy.html",
+  "results.html",
   "styles.css",
   "scripts.js",
-  "5.png",
-  "Style Board Clinical Physiques.png",
+  "robots.txt",
+  "sitemap.xml",
 ]) {
-  copyFileSync(join(process.cwd(), file), join(publicDir, file));
+  copyFileSync(join(root, file), join(publicDir, file));
 }
+
+cpSync(join(root, "assets"), join(publicDir, "assets"), { recursive: true });

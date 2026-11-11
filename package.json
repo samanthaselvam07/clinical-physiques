@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node tools/build-static.mjs"
+    "build": "node tools/render-results.mjs && node tools/build-static.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
